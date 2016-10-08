@@ -1,0 +1,109 @@
+{
+	hostname_prefix = '@hostname_prefix@',
+	site_name = '@site_name@',
+	site_code = '@site_code@',
+
+	prefix4 = '@prefix4@',
+	prefix6 = '@prefix6@',
+
+	mesh_on_lan = true,
+	
+	-- timezone
+	timezone = 'CET-1CEST,M3.5.0,M10.5.0/3', -- Europe/Berlin
+	
+	-- network ntp services
+	ntp_servers = { '0.de.pool.ntp.org', '1.de.pool.ntp.org', '2.de.pool.ntp.org', '3.de.pool.ntp.org' },
+	
+	-- regulatory domain of your wifi
+	regdom = 'DE',
+
+	wifi24 = {
+		channel = 1,
+		ap = {
+			ssid = 'Freifunk-Bergstrasse.de',
+		},
+		ibss = {
+			ssid = '@site_code@-mesh',
+			bssid = 'ca:ff:ee:ca:ff:ee',
+			mcast_rate = 12000,
+		},
+	},
+	wifi5 = {
+		channel = 44,
+		ap = {
+			ssid = 'Freifunk-Bergstrasse.de',
+		},
+		ibss = {
+			ssid = '@site_code@-mesh',
+			bssid = 'ca:ff:ee:ca:ff:ee',
+			mcast_rate = 12000,
+		},
+	},
+
+	next_node = {
+		ip4 = '@next_node.ip4@',
+		ip6 = '@next_node.ip6@',
+
+		mac = 'de:ad:be:ef:43:01',
+	},
+   	tunneldigger_mesh_vpn = {
+		mtu = 1364,
+		brokers = { 
+				'gw01.server.freie-infrastruktur.de:@port@',
+				'gw03.server.freie-infrastruktur.de:@port@',
+		},
+		bandwidth_limit = {
+		    enabled = false,
+		    ingress = 25000,
+		    egress = 5000,
+		},
+	},
+	
+	-- autoupdater config
+	autoupdater = {
+		branch = 'stable',
+		branches = {
+			stable = {
+				name = 'stable',
+				mirrors = {
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/stable/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/stable/sysupgrade/',
+				},
+				good_signatures = 1,
+				pubkeys = {
+					'2fcfc77478fe5086246e0724789db0a44e0e5318071892aa06aeef5bc9ad5287', -- Matthias				
+					'21f8956c09322fd7d503e4764744252d97f989e61cfd1c0e0b791ef1f6a2a3ab', -- Marcus
+					'33a924fedbb7d91555749e51dbf2401cc9bf6d97efb36935e3c746c25899ed8f', -- Klaus
+				},
+			},
+			beta = {
+				name = 'beta',
+				mirrors = {
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/beta/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/beta/sysupgrade/',
+				},
+				good_signatures = 1,
+				pubkeys = {
+					'2fcfc77478fe5086246e0724789db0a44e0e5318071892aa06aeef5bc9ad5287', -- Matthias				
+					'21f8956c09322fd7d503e4764744252d97f989e61cfd1c0e0b791ef1f6a2a3ab', -- Marcus
+					'33a924fedbb7d91555749e51dbf2401cc9bf6d97efb36935e3c746c25899ed8f', -- Klaus
+				},
+			},
+			experimental = {
+				name = 'experimental',
+				mirrors = {
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/experimental/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/experimental/sysupgrade/',
+				},
+				good_signatures = 1,
+				pubkeys = {
+					'2fcfc77478fe5086246e0724789db0a44e0e5318071892aa06aeef5bc9ad5287', -- Matthias				
+					'21f8956c09322fd7d503e4764744252d97f989e61cfd1c0e0b791ef1f6a2a3ab', -- Marcus
+					'33a924fedbb7d91555749e51dbf2401cc9bf6d97efb36935e3c746c25899ed8f', -- Klaus
+				},
+			},
+		},
+	},
+}
+
+
