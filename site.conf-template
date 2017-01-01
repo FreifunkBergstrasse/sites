@@ -50,7 +50,9 @@
 		mtu = 1364,
 		brokers = { 
 				'gw01.server.freie-infrastruktur.de:@port@',
+				'gw02.server.freie-infrastruktur.de:@port@',
 				'gw03.server.freie-infrastruktur.de:@port@',
+				'gw04.server.freie-infrastruktur.de:@port@',
 		},
 		bandwidth_limit = {
 		    enabled = false,
