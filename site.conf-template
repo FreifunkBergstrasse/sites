@@ -24,7 +24,7 @@
 		},
 		ibss = {
 			ssid = '@site_code@-mesh',
-			bssid = 'ca:ff:ee:ca:ff:ee',
+			bssid = '@BSSID@',
 			mcast_rate = 12000,
 		},
 	},
@@ -35,7 +35,7 @@
 		},
 		ibss = {
 			ssid = '@site_code@-mesh',
-			bssid = 'ca:ff:ee:ca:ff:ee',
+			bssid = '@BSSID@',
 			mcast_rate = 12000,
 		},
 	},
@@ -70,8 +70,8 @@
 			stable = {
 				name = 'stable',
 				mirrors = {
-					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/stable/sysupgrade/',
-					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/stable/sysupgrade/',
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@firmware@/stable/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@firmware@/stable/sysupgrade/',
 				},
 				good_signatures = 1,
 				pubkeys = {
@@ -83,8 +83,8 @@
 			beta = {
 				name = 'beta',
 				mirrors = {
-					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/beta/sysupgrade/',
-					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/beta/sysupgrade/',
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@firmware@/beta/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@firmware@/beta/sysupgrade/',
 				},
 				good_signatures = 1,
 				pubkeys = {
@@ -96,8 +96,8 @@
 			experimental = {
 				name = 'experimental',
 				mirrors = {
-					'http://autoupdater-v4.server.freie-infrastruktur.de/@site_code@/experimental/sysupgrade/',
-					'http://autoupdater-v6.server.freie-infrastruktur.de/@site_code@/experimental/sysupgrade/',
+					'http://autoupdater-v4.server.freie-infrastruktur.de/@firmware@/experimental/sysupgrade/',
+					'http://autoupdater-v6.server.freie-infrastruktur.de/@firmware@/experimental/sysupgrade/',
 				},
 				good_signatures = 1,
 				pubkeys = {
