@@ -1,30 +1,27 @@
 GLUON_SITE_PACKAGES := \
-	ffpb-ebtables-net-rules \
 	gluon-respondd\
 	gluon-autoupdater \
 	gluon-config-mode-autoupdater \
 	gluon-config-mode-contact-info \
 	gluon-config-mode-core \
 	gluon-config-mode-geo-location \
-	gluon-config-mode-tunneldigger \
 	gluon-config-mode-hostname \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
-	gluon-luci-admin \
-	gluon-luci-autoupdater \
-	gluon-luci-portconfig \
-	gluon-luci-private-wifi \
-	gluon-luci-wifi-config \
-	gluon-next-node \
+	gluon-ebtables-source-filter \
+	gluon-web-admin \
+	gluon-web-autoupdater \
+	gluon-web-network \
+	gluon-web-private-wifi \
+	gluon-web-wifi-config \
 	gluon-mesh-batman-adv-15 \
 	gluon-mesh-vpn-tunneldigger \
 	gluon-radvd \
-	gluon-status-page \
 	gluon-setup-mode \
+	gluon-status-page \
 	haveged \
-	gluon-tunneldigger-watchdog \
-	gluon-migrate-vpn \
 	iptables \
+	gluon-mesh-vpn-core \
 	iwinfo \
 	gluon-ssid-changer \
 	gluon-config-mode-show-mac \
